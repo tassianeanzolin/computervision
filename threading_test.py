@@ -16,7 +16,7 @@ class CamThread(threading.Thread):
 def CamPreview(PreviewName, CamId):
     cv2.namedWindow(PreviewName)
     cam = cv2.VideoCapture(CamId)
-    if cam.isOpened():  # try to get the first frame
+    if cam.isOpened():  # capturando o primeiro frame
         rval, frame = cam.read()
     else:
         rval = False
